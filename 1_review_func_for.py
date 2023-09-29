@@ -129,11 +129,31 @@ band_info1 = {
 }
 
 band_info2 = {}
+band_info2['label'] = 'Interscope Records'
+band_info2['formed'] = 1989
+band_info2['disbanded'] = 1994
 band_info2['city'] = 'San Francisco'
+
 band_info2['members'] = {}
 band_info2['members']['drums'] = 'Wanda Day'
+band_info2['members']['guitar'] = 'Shaunna Hall'
+band_info2['members']['bass'] = 'Christa Hillhouse'
+band_info2['members']['vocals'] = 'Linda Perry'
+
 band_info2['albums'] = []
 band_info2['albums'].append('Bigger, Better, Faster, More!')
+band_info2['albums'].append('Hello Mr. President')
+
+band_info2['videos'] = {}
+band_info2['videos'][1992] = 'Dear Mr. President'
+band_info2['videos'][1993]= 'Spaceman'
+band_info2['videos'][1994]= 'Superfly'
+
+band_info2['soundtracks'] = []
+band_info2['soundtracks'].append("Wayne's World 2")
+band_info2['soundtracks'].append('Airheads')
+
+
 # COMPLETE THIS...
 
 if band_info1 == band_info2:
