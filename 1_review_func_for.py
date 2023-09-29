@@ -7,6 +7,9 @@ print('Challenge 1 -------------')
 # Examine the following function code. Can you write an invocation that will
 # cause it to print the phrase: "Don't Stop Believin"?
 
+# def journey(verb, action='Do'):
+#     print(action, 'Stop', verb + 'in')
+
 def journey(verb, action='Do'):
     print(action, 'Stop', verb + 'in')
 
@@ -27,19 +30,29 @@ print('Challenge 2 -------------')
 #         (...chorus goes here...)
 #         Chorus 3
 #         (...chorus goes here...)
+# chorus = [
+#     "Don't stop believin'",
+#     "Hold on to the feelin'",
+#     "Streetlight people",
+# ]
+
+# # HINT: You should do this by creating a new for-loop that contains the chorus
+# # for-loop. The outer for-loop should use the "range()" function to go through
+# # the numbers 1-3. Examine this example code below:
+# for lyric in chorus:
+#     pass
+# for number in range(3):
+#     pass
+
 chorus = [
     "Don't stop believin'",
     "Hold on to the feelin'",
     "Streetlight people",
 ]
-
-# HINT: You should do this by creating a new for-loop that contains the chorus
-# for-loop. The outer for-loop should use the "range()" function to go through
-# the numbers 1-3. Examine this example code below:
-for lyric in chorus:
-    pass
-for number in range(3):
-    pass
+for number in range(1, 4):
+    print('Chorus', number)
+    for lyric in chorus:
+        print(lyric)
 
 
 
@@ -49,6 +62,45 @@ print('Challenge 3 -------------')
 # information on a band. To get practice setting keys in dictionaries, complete
 # the code below band_info2 such that band_info1 and band_info2 are equivalent.
 # You should not need to modify band_info1 at all.
+
+# band_info1 = {
+#     'label': 'Interscope Records',
+#     'formed': 1989,
+#     'disbanded': 1994,
+#     'city': 'San Francisco',
+#     'members': {
+#         'drums': 'Wanda Day',
+#         'guitar': 'Shaunna Hall',
+#         'bass': 'Christa Hillhouse',
+#         'vocals': 'Linda Perry',
+#     },
+#     'albums': [
+#         'Bigger, Better, Faster, More!',
+#         'Hello Mr. President',
+#     ],
+#     'videos': {
+#         1992: 'Dear Mr. President',
+#         1993: 'Spaceman',
+#         1994: 'Superfly',
+#     },
+#     'soundtracks': [
+#         "Wayne's World 2",
+#         'Airheads',
+#     ],
+# }
+
+# band_info2 = {}
+# band_info2['city'] = 'San Francisco'
+# band_info2['members'] = {}
+# band_info2['members']['drums'] = 'Wanda Day'
+# band_info2['albums'] = []
+# band_info2['albums'].append('Bigger, Better, Faster, More!')
+# # COMPLETE THIS...
+
+# if band_info1 == band_info2:
+#     print("Challenge 3 complete!")
+# else:
+#     print("Challenge 3 not yet done...")
 
 band_info1 = {
     'label': 'Interscope Records',
