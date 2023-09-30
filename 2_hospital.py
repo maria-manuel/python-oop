@@ -1,5 +1,6 @@
 # REMINDER: Start with print, and save and test after every change!
 
+print('Hello function world!')
 
 # For this challenge, we are going to build up a set of functions to create
 # code for a semi-realistic situation: We will be building helper functions to
@@ -14,14 +15,23 @@ print('Challenge 1 -------------')
 # Uncomment and examine the following code. Can you explain what every line is
 # doing?
 
+# def patient_initialize(patient):
+#     patient['first_name'] = 'Eric'
+#     patient['last_name'] = 'Idle'
+#     patient['is_checked_in'] = False
+
+# eric = {}
+# patient_initialize(eric)
+# print(eric)
+
 def patient_initialize(patient):
     patient['first_name'] = 'Eric'
     patient['last_name'] = 'Idle'
     patient['is_checked_in'] = False
 
-# eric = {}
-# patient_initialize(eric)
-# print(eric)
+eric = {} #eric is variable holding empty dictionary#
+patient_initialize(eric) #function invoked for eric info
+print(eric) #data listed in function for eric is printed
 
 print('Challenge 2 -------------')
 # Challenge 2:
