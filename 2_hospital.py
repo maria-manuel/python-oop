@@ -82,10 +82,8 @@ print('Challenge 3 -------------')
 # "is_checked_in" assigned to be True.
 # - Like previous challenges, use print to verify the function works.
 
-
-
-
-
+def patient_initialize(patient):
+    patient['is_checked_in'] = True
 
 
 print('Challenge 4 -------------')
