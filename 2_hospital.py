@@ -37,27 +37,41 @@ print('Challenge 1 -------------')
 
 print('Challenge 2 -------------')
 # Challenge 2:
+####Part One###
 # Patient_initialize is too inflexible. We want it to work for ANY patient.
 # - Rewrite the function definition of patient_initialize so that it can accept
 # two additional parameters: "first", and "last"
 # - Rewrite the lines containing 'Eric' and 'Idle' to use these two new
 # parameter variables that you just created
+####Part Two###
 # - Write 2 more invocations of the function to create a patient for yourself
 # and a famous celebrity (or someone sitting next to you!)
 # - Use print to confirm that your function is working correctly by printing
 # out the patient variable before and after the invocation of the function.
 
+####Answer Part One###
+# def patient_initialize(patient, first, last):
+#     patient['first_name'] = first
+#     patient['last_name'] = last
+#     patient['is_checked_in'] = False
+
+# eric = {} 
+# patient_initialize(eric, 'Michael', 'B') 
+# print(eric) 
+
+####Answer Part Two###
 def patient_initialize(patient, first, last):
     patient['first_name'] = first
     patient['last_name'] = last
     patient['is_checked_in'] = False
 
-eric = {} 
-patient_initialize(eric, 'Michael', 'B') 
-print(eric) 
+person1 = {} 
+patient_initialize(person1, 'Michael', 'B') 
+print(person1) 
 
-
-
+person2 = {} 
+patient_initialize(person2, 'Keanu', 'R') 
+print(person2)
 
 
 print('Challenge 3 -------------')
@@ -67,6 +81,7 @@ print('Challenge 3 -------------')
 # the function from Challenges 1 & 2, and then modify the patient to make
 # "is_checked_in" assigned to be True.
 # - Like previous challenges, use print to verify the function works.
+
 
 
 
