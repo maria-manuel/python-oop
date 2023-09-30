@@ -172,6 +172,15 @@ print('Challenge 4 -------------')
 # Optional: Make it into a while loop that keeps on asking, and "fails
 # gracefully" if there is no band with that title
 
+# bands = {
+#     'Journey': "Don't Stop Believin'",
+#     'Bon Jovi': "Livin' On a Prayer",
+#     'Joy Division': 'Love Will Tear Us Apart',
+#     'Queen': 'Bohemian Rhapsody',
+#     '4 Non Blondes': "What's Up?",
+#     'Credence Clearwater Revival': "Fortunate Son",
+# }
+
 bands = {
     'Journey': "Don't Stop Believin'",
     'Bon Jovi': "Livin' On a Prayer",
@@ -181,10 +190,17 @@ bands = {
     'Credence Clearwater Revival': "Fortunate Son",
 }
 
+while True: 
+    band_name = input("Band name? ")
 
+    if band_name == 'quit':
+        break
 
-
-
+    if band_name in bands:
+        song_name = bands[band_name]
+        print('A song by', band_name, 'is', song_name)
+    else:
+        print("I don't know the band")
 
 
 print('-------------')
