@@ -24,14 +24,16 @@ print('Challenge 1 -------------')
 # patient_initialize(eric)
 # print(eric)
 
-def patient_initialize(patient):
-    patient['first_name'] = 'Eric'
-    patient['last_name'] = 'Idle'
-    patient['is_checked_in'] = False
+## Answer ##
 
-eric = {} #eric is variable holding empty dictionary#
-patient_initialize(eric) #function invoked for eric info
-print(eric) #data listed in function for eric is printed
+# def patient_initialize(patient):
+#     patient['first_name'] = 'Eric'
+#     patient['last_name'] = 'Idle'
+#     patient['is_checked_in'] = False
+
+# eric = {}                     #eric is variable holding empty dictionary#
+# patient_initialize(eric)      #function invoked for eric info
+# print(eric)                   #data listed in function for eric is printed
 
 print('Challenge 2 -------------')
 # Challenge 2:
@@ -45,7 +47,14 @@ print('Challenge 2 -------------')
 # - Use print to confirm that your function is working correctly by printing
 # out the patient variable before and after the invocation of the function.
 
+def patient_initialize(patient, first, last):
+    patient['first_name'] = first
+    patient['last_name'] = last
+    patient['is_checked_in'] = False
 
+eric = {} 
+patient_initialize(eric, 'Michael', 'B') 
+print(eric) 
 
 
 
