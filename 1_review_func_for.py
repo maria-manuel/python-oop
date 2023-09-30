@@ -190,18 +190,32 @@ bands = {
     'Credence Clearwater Revival': "Fortunate Son",
 }
 
+## Correct answer w/break ##
+# while True: 
+#     band_name = input("Band name? ")
+
+#     if band_name == 'quit':
+#         break
+
+#     if band_name in bands:
+#         song_name = bands[band_name]
+#         print('A song by', band_name, 'is', song_name)
+#     else:
+#         print("I don't know the band")
+
 while True: 
     band_name = input("Band name? ")
 
     if band_name == 'quit':
         break
 
-    if band_name in bands:
-        song_name = bands[band_name]
-        print('A song by', band_name, 'is', song_name)
-    else:
+    if band_name not in bands:
         print("I don't know the band")
+        continue
 
+    song_name = bands[band_name]
+    print('A song by', band_name, 'is', song_name)
+    
 
 print('-------------')
 # Bonus Challenge:
