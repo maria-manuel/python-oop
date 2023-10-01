@@ -82,8 +82,14 @@ print('Challenge 3 -------------')
 # "is_checked_in" assigned to be True.
 # - Like previous challenges, use print to verify the function works.
 
-def patient_initialize(patient):
+def patient_check_in(patient):
     patient['is_checked_in'] = True
+
+print('Before check in')
+print(person2)
+patient_check_in(person2)
+print('After check in')
+print(person2)
 
 
 print('Challenge 4 -------------')
@@ -99,10 +105,33 @@ print('Challenge 4 -------------')
 # - Like previous challenges, use print to verify the function works.
 
 
+### Answer Version 1 ###
 
+# def patient_nurse_checkup(patient):
 
+#     smoke = input('Does the patient smoke? ')
+#     drink = input('Does the patient drink? ')
+#     pressue = input("What is the patient's blood pressure? ")
+#     patient['does_smokes'] = smoke
+#     patient['does_drink'] = drink
+#     patient['last_name'] = pressue
 
+# patient_nurse_checkup(person2)
+# print(person2)
 
+### Answer Version 2 - clean code###
+
+def patient_nurse_checkup(patient):
+
+    smoke = input('Does the patient smoke? ')
+    drink = input('Does the patient drink? ')
+    pressure = input("What is the patient's blood pressure? ")
+    patient['does_smoke'] = input('Does the patient smoke? ')
+    patient['does_drink'] = input('Does the patient drink? ')
+    patient['last_name'] = input("What is the patient's blood pressure? ")
+
+patient_nurse_checkup(person2)
+print(person2)
 
 print('Challenge 5 -------------')
 # Challenge 5:
@@ -115,8 +144,6 @@ print('Challenge 5 -------------')
 
 # Hint: Feel free to comment out the previous invocations of the above function
 # Add a prints as needed to report back on the process.
-
-
 
 
 
