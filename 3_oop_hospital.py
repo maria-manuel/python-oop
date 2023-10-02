@@ -21,16 +21,17 @@ print('Challenge 1 -------------')
 
 # person = Patient('Keanu')
 
+## Answer
+# class Patient:                             # class / object
+#     def __init__(self, first, last):       # function / method
+#         self.first_name = first            # property
+#         self.last_name = last              # property
+#         self.is_checked_in = False         # property
 
-class Patient:                             # class / object
-    def __init__(self, first, last):        # function / method
-        self.first_name = first       # property
-        self.last_name = last          # property
-        self.is_checked_in = False         # property
+# person = Patient('Keanu', 'Reeves')       
+# print(person.first_name)             # invoke / instantation or initialize
+# print(person.last_name)              # invoke / instantation or initialize
 
-person = Patient('Keanu', 'Reeves')       
-print(person.first_name)             # invoke / instantation or initialize
-print(person.last_name)              # invoke / instantation or initialize
 
 
 print('Challenge 2 -------------')
@@ -50,7 +51,22 @@ print('Challenge 2 -------------')
 #        Last name: Hacker
 #        Checked-in status: False
 
+## Answer
 
+class Patient:                            
+    def __init__(self, first, last):        
+        self.first_name = first       
+        self.last_name = last         
+        self.is_checked_in = False
+
+    def print_info(self):
+        print('---PATIENT---')
+        print('First name: ', self.first_name )         
+        print('First name: ', self.first_name )
+        print('Check-in status: ', self.is_checked_in)
+
+person = Patient('Keanu', 'Reeves')       
+person.print_info()
 
 
 print('Challenge 3 -------------')
