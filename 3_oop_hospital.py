@@ -1,9 +1,10 @@
 # REMINDER: Start with print, and save and test after every change!
 
 
+print('Hello OOP world!')
+
 # Welcome to General Hospital Oop! Now this activity involves transforming the
 # code form activity 1 into the "object oriented programming" syntax.
-
 
 print('Challenge 1 -------------')
 # Challenge 1:
@@ -12,16 +13,24 @@ print('Challenge 1 -------------')
 # 2. Modify it to also support a last name, instead of the "hard-coded" last
 # name of Cleese.
 
+# class Patient:                             
+#     def __init__(self, first_name):        
+#         self.first_name = first_name       
+#         self.last_name = 'Cleese'          
+#         self.is_checked_in = False        
 
-class Patient:
-    def __init__(self, first_name):
-        self.first_name = first_name
-        self.last_name = 'Cleese'
-        self.is_checked_in = False
+# person = Patient('Keanu')
 
 
-john = Patient('John')
+class Patient:                             # class / object
+    def __init__(self, first, last):        # function / method
+        self.first_name = first       # property
+        self.last_name = last          # property
+        self.is_checked_in = False         # property
 
+person = Patient('Keanu', 'Reeves')       
+print(person.first_name)             # invoke / instantation or initialize
+print(person.last_name)              # invoke / instantation or initialize
 
 
 print('Challenge 2 -------------')

@@ -1,137 +1,135 @@
-# REMINDER: Start with print, and save and test after every change!
+# # REMINDER: Start with print, and save and test after every change!
 
-print('Hello function world!')
+print('Hello OOP world')
+# print('Hello function world!')
 
-# For this challenge, we are going to build up a set of functions to create
-# code for a semi-realistic situation: We will be building helper functions to
-# manage data about a patient at a hospital. You can imagine the final software
-# being useful for nurses and doctors to keep track of information on patients.
+# # For this challenge, we are going to build up a set of functions to create
+# # code for a semi-realistic situation: We will be building helper functions to
+# # manage data about a patient at a hospital. You can imagine the final software
+# # being useful for nurses and doctors to keep track of information on patients.
 
-# The information about patients will be in a dictionary that is passed around
-# via parameters to and from functions.
+# # The information about patients will be in a dictionary that is passed around
+# # via parameters to and from functions.
 
-print('Challenge 1 -------------')
-# Challenge 1:
-# Uncomment and examine the following code. Can you explain what every line is
-# doing?
+# print('Challenge 1 -------------')
+# # Challenge 1:
+# # Uncomment and examine the following code. Can you explain what every line is
+# # doing?
 
-# def patient_initialize(patient):
-#     patient['first_name'] = 'Eric'
-#     patient['last_name'] = 'Idle'
-#     patient['is_checked_in'] = False
+# # def patient_initialize(patient):
+# #     patient['first_name'] = 'Eric'
+# #     patient['last_name'] = 'Idle'
+# #     patient['is_checked_in'] = False
 
-# eric = {}
-# patient_initialize(eric)
-# print(eric)
+# # eric = {}
+# # patient_initialize(eric)
+# # print(eric)
 
-## Answer ##
+# ## Answer ##
 
-# def patient_initialize(patient):
-#     patient['first_name'] = 'Eric'
-#     patient['last_name'] = 'Idle'
-#     patient['is_checked_in'] = False
+# # def patient_initialize(patient):
+# #     patient['first_name'] = 'Eric'
+# #     patient['last_name'] = 'Idle'
+# #     patient['is_checked_in'] = False
 
-# eric = {}                     #eric is variable holding empty dictionary#
-# patient_initialize(eric)      #function invoked for eric info
-# print(eric)                   #data listed in function for eric is printed
+# # eric = {}                     #eric is variable holding empty dictionary#
+# # patient_initialize(eric)      #function invoked for eric info
+# # print(eric)                   #data listed in function for eric is printed
 
-print('Challenge 2 -------------')
-# Challenge 2:
-####Part One###
-# Patient_initialize is too inflexible. We want it to work for ANY patient.
-# - Rewrite the function definition of patient_initialize so that it can accept
-# two additional parameters: "first", and "last"
-# - Rewrite the lines containing 'Eric' and 'Idle' to use these two new
-# parameter variables that you just created
-####Part Two###
-# - Write 2 more invocations of the function to create a patient for yourself
-# and a famous celebrity (or someone sitting next to you!)
-# - Use print to confirm that your function is working correctly by printing
-# out the patient variable before and after the invocation of the function.
+# print('Challenge 2 -------------')
+# # Challenge 2:
+# ####Part One###
+# # Patient_initialize is too inflexible. We want it to work for ANY patient.
+# # - Rewrite the function definition of patient_initialize so that it can accept
+# # two additional parameters: "first", and "last"
+# # - Rewrite the lines containing 'Eric' and 'Idle' to use these two new
+# # parameter variables that you just created
+# ####Part Two###
+# # - Write 2 more invocations of the function to create a patient for yourself
+# # and a famous celebrity (or someone sitting next to you!)
+# # - Use print to confirm that your function is working correctly by printing
+# # out the patient variable before and after the invocation of the function.
 
-####Answer Part One###
-# def patient_initialize(patient, first, last):
-#     patient['first_name'] = first
-#     patient['last_name'] = last
-#     patient['is_checked_in'] = False
+# ####Answer Part One###
+# # def patient_initialize(patient, first, last):
+# #     patient['first_name'] = first
+# #     patient['last_name'] = last
+# #     patient['is_checked_in'] = False
 
-# eric = {} 
-# patient_initialize(eric, 'Michael', 'B') 
-# print(eric) 
+# # eric = {} 
+# # patient_initialize(eric, 'Michael', 'B') 
+# # print(eric) 
 
-####Answer Part Two###
+# ####Answer Part Two###
 def patient_initialize(patient, first, last):
     patient['first_name'] = first
     patient['last_name'] = last
     patient['is_checked_in'] = False
 
-person1 = {} 
-patient_initialize(person1, 'Michael', 'B') 
-print(person1) 
+# person1 = {} 
+# patient_initialize(person1, 'Michael', 'B') 
+# print(person1) 
 
-person2 = {} 
-patient_initialize(person2, 'Keanu', 'R') 
-print(person2)
+# person2 = {} 
+# patient_initialize(person2, 'Keanu', 'R') 
+# print(person2)
 
 
-print('Challenge 3 -------------')
-# Challenge 3:
-# - Write a new function called "patient_check_in".
-# - This function should accept a patient dictionary as an argument, much like
-# the function from Challenges 1 & 2, and then modify the patient to make
-# "is_checked_in" assigned to be True.
-# - Like previous challenges, use print to verify the function works.
+# print('Challenge 3 -------------')
+# # Challenge 3:
+# # - Write a new function called "patient_check_in".
+# # - This function should accept a patient dictionary as an argument, much like
+# # the function from Challenges 1 & 2, and then modify the patient to make
+# # "is_checked_in" assigned to be True.
+# # - Like previous challenges, use print to verify the function works.
 
 def patient_check_in(patient):
     patient['is_checked_in'] = True
 
-print('Before check in')
-print(person2)
-patient_check_in(person2)
-print('After check in')
-print(person2)
-
-
-print('Challenge 4 -------------')
-# Challenge 4:
-# - Write a new function called "patient_nurse_check_up". Like previous
-# challenges, it should take a patient dictionary as an argument.
-# - Using input(), it should then ask the following questions:
-#     - Does the patient smoke?
-#     - Does the patient drink?
-#     - Patient blood-pressure?
-# - It should store the responses into the patient dictionary, stored as new
-# keys (name the keys whatever you think makes sense).
-# - Like previous challenges, use print to verify the function works.
-
-
-### Answer Version 1 ###
-
-# def patient_nurse_checkup(patient):
-
-#     smoke = input('Does the patient smoke? ')
-#     drink = input('Does the patient drink? ')
-#     pressue = input("What is the patient's blood pressure? ")
-#     patient['does_smokes'] = smoke
-#     patient['does_drink'] = drink
-#     patient['last_name'] = pressue
-
-# patient_nurse_checkup(person2)
+# print('Before check in')
+# print(person2)
+# patient_check_in(person2)
+# print('After check in')
 # print(person2)
 
-### Answer Version 2 - clean code###
+
+# print('Challenge 4 -------------')
+# # Challenge 4:
+# # - Write a new function called "patient_nurse_check_up". Like previous
+# # challenges, it should take a patient dictionary as an argument.
+# # - Using input(), it should then ask the following questions:
+# #     - Does the patient smoke?
+# #     - Does the patient drink?
+# #     - Patient blood-pressure?
+# # - It should store the responses into the patient dictionary, stored as new
+# # keys (name the keys whatever you think makes sense).
+# # - Like previous challenges, use print to verify the function works.
+
+
+# ### Answer Version 1 ###
+
+# # def patient_nurse_checkup(patient):
+
+# #     smoke = input('Does the patient smoke? ')
+# #     drink = input('Does the patient drink? ')
+# #     pressue = input("What is the patient's blood pressure? ")
+# #     patient['does_smokes'] = smoke
+# #     patient['does_drink'] = drink
+# #     patient['last_name'] = pressue
+
+# # patient_nurse_checkup(person2)
+# # print(person2)
+
+# ### Answer Version 2 - clean code###
 
 def patient_nurse_checkup(patient):
 
-    smoke = input('Does the patient smoke? ')
-    drink = input('Does the patient drink? ')
-    pressure = input("What is the patient's blood pressure? ")
     patient['does_smoke'] = input('Does the patient smoke? ')
     patient['does_drink'] = input('Does the patient drink? ')
     patient['last_name'] = input("What is the patient's blood pressure? ")
 
-patient_nurse_checkup(person2)
-print(person2)
+# patient_nurse_checkup(person2)
+# print(person2)
 
 print('Challenge 5 -------------')
 # Challenge 5:
@@ -145,6 +143,16 @@ print('Challenge 5 -------------')
 # Hint: Feel free to comment out the previous invocations of the above function
 # Add a prints as needed to report back on the process.
 
+def patient_visit(patient):
+    first_name = input('First name? ')
+    last_name = input('Last name? ')
+    patient_initialize(patient, first_name, last_name)
+    patient_check_in(patient)
+    patient_nurse_checkup(patient)
+
+person = {}
+patient_visit(person)
+print(person)
 
 
 print('-------------')
