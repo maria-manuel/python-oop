@@ -53,20 +53,20 @@ print('Challenge 2 -------------')
 
 ## Answer
 
-class Patient:                            
-    def __init__(self, first, last):        
-        self.first_name = first       
-        self.last_name = last         
-        self.is_checked_in = False
+# class Patient:                            
+#     def __init__(self, first, last):        
+#         self.first_name = first       
+#         self.last_name = last         
+#         self.is_checked_in = False
 
-    def print_info(self):
-        print('---PATIENT---')
-        print('First name: ', self.first_name )         
-        print('First name: ', self.first_name )
-        print('Check-in status: ', self.is_checked_in)
+#     def print_info(self):
+#         print('---PATIENT---')
+#         print('First name: ', self.first_name )         
+#         print('First name: ', self.first_name )
+#         print('Check-in status: ', self.is_checked_in)
 
-person = Patient('Keanu', 'Reeves')       
-person.print_info()
+# person = Patient('Keanu', 'Reeves')       
+# person.print_info()
 
 
 print('Challenge 3 -------------')
@@ -76,10 +76,26 @@ print('Challenge 3 -------------')
 # - Using print_info before and after an invocation of check_in(), ensure that
 # your check_in() method works.
 
+class Patient:                            
+    def __init__(self, first, last):        
+        self.first_name = first       
+        self.last_name = last         
+        self.is_checked_in = False
 
+    def print_info(self):
+        print('---PATIENT---')
+        print('First name: ', self.first_name )         
+        print('Last name: ', self.last_name )
+        print('Check-in status: ', self.is_checked_in)
 
+    def check_in(self):
+        print('checking in ...')
+        self.is_checked_in = True
 
+person = Patient('Keanu', 'Reeves')       
 
+person.check_in()
+person.print_info()
 
 print('Challenge 4 -------------')
 # Challenge 4:
